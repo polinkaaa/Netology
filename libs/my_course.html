@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои курсы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/slick.css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="#" class="header-logo"></a>
+                <div class="header-info">
+                    <nav>
+                        <ul class="header-nav">
+                            <li><a href="#" class="header-link">Лента</a></li>
+                            <li><a href="#" class="header-link">Мои курсы</a></li>
+                            <li><a href="#" class="header-link">Друзья</a></li>
+                        </ul>
+                    </nav>
+                    <button class="bell"></button>
+                    <button class="photo-btn"><img src="../images/profile.png" alt="" class="photo-profile"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="search">
+                <div class="search-box">
+                  <input type="text" class="search-text" placeholder="Поиск">
+                  <a href="#" class="search-btn"><img src="../images/search.png" alt="" class="search-photo"></a>
+                </div>
+            </div>
+            <div class="main">
+                <div class="main-link">
+                    <p>Мои курсы</p>
+                    <p>Рекомендации</p>
+                </div>
+                <div class="reaction">
+                    <button class="react-btn"><img src="../images/acc.png" alt=""></button>
+                    <button class="react-btn"><img src="../images/like.png" alt=""></button>
+                    <button class="react-btn"><img src="../images/msg.png" alt=""></button>
+                    <button class="react-btn"><img src="../images/repost.png" alt=""></button>
+                    <button class="react-btn"><img src="../images/impotant.png" alt=""></button>
+                </div>
+                <div style=' width:100%; max-width:700px; height:auto;'>
+                    <div class="slider-one owl-carousel-img">
+                        <video controls src="../video/Photoshop_Tutorial_1.mp4"></video>
+                        <video controls src="../video/Photoshop_Tutorial_2.mp4"></video>
+                        <video controls src="../video/Photoshop_Tutorial_3.mp4"></video>
+                    </div>
+                </div>
+            </div>
+                <div class="arrow">
+                    <button class="arrow_btn arrow_up"><img src="../images/arrow-up.png" alt="" class="arrow-pic"></button>
+                    <button class="arrow_btn arrow_down"><img src="../images/arrow-down.png" alt="" class="arrow-pic"></button>
+                </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../styles/slick-theme.css"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

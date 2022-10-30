@@ -7,32 +7,124 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-header {
-    background-color: #D6F3FF;
-    box-shadow: 3px 6px 2px rgba(0, 0, 0, 0.25);
+.header {
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    font-size: 14px;
+}
+.header-logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    width: 144px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-nav {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 0;
+    gap: 40px;
+    padding-right: 195px;
 }
-.sect {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.header-link {
     text-decoration: none;
     color: #000000;
 }
-.pic_my_courses {
-    width: 75px;
-    height: 82px;
+.header-info {
+    display: flex;
+    align-items: center;
 }
-.pic_friends {
-    width: 51px;
-    height: 89px;
+.bell, .photo-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
-.pic_profile {
-    width: 65px;
-    height: 65px;
+.bell {
+    display: block;
+    background-image: url(../images/bell.png);
+    width: 22px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bell:hover {
+    background-image: url(../images/bell_other.png);
+}
+.photo-profile {
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+}
+.search-box {
+    display: flex;
+    position: absolute;
+    background-color: #CCCCCC;
+    height: 25px;
+    border-radius: 10px;
+    padding: 13px;
+    align-items: center;
+    margin-left: 880px;
+    margin-top: 15px;
+}
+.search-photo {
+    width: 26px;
+    height: 24px;
+}
+.search-text {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+}
+.main {
+    display: flex;
+    padding-top: 100px;
+    gap: 40px;
+}
+.main-link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.main-link p {
+    margin: 0;
+}
+.reaction {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+}
+.react-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.react-btn img {
+    width: 30px;
+    height: 30px;
+}
+.reaction button:last-child {
+    position: absolute;
+    bottom: 0;
+}
+.arrow {
+    display: flex;
+    justify-content: center;
+}
+.arrow-pic {
+    width: 40px;
+    height: 25px;
+}
+.arrow_btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
