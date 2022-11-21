@@ -4,22 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unigirl</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/normalize.css">
-    <!--<link rel="stylesheet" href="../styles/main.css">-->
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <ul class="header-nav">
-                <li><a href="#" class="sect"><img src="../images/my_courses.png" alt="" class="pic_my_courses">Мои курсы</a></li>
-                <li><a href="#" class="sect"><img src="../images/friends.png" alt="" class="pic_friends">Друзья</a></li>
-                <li><a href="#" class="sect"><img src="../images/profile.png" alt="" class="pic_profile">Профиль</a></li>
-            </ul>
+            <div class="header">
+                <a href="#" class="header-logo"></a>
+                <div class="header-info">
+                    <nav>
+                        <ul class="header-nav">
+                            <li><a href="my_course.html" class="header-link">Лента</a></li>
+                            <li><button href="#" class="header-link">Мои курсы</button></li>
+                            <li><button href="#" class="header-link" onclick="openModal()">Друзья</button></li>
+                        </ul>
+                    </nav>
+                    <button class="btn"><svg class="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" height="14" width="14" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7,.5a4.29,4.29,0,0,1,4.29,4.29c0,4.77,1.74,5.71,2.21,5.71H.5c.48,0,2.21-.95,2.21-5.71A4.29,4.29,0,0,1,7,.5Z"></path>
+                        <path d="M5.5,12.33a1.55,1.55,0,0,0,3,0"></path></svg></button>
+                    <button class="photo-btn"><img src="../images/profile.png" alt="" class="photo-profile"></button>
+                </div>
+            </div>
         </div>
     </header>
+    <main>
+        <div class="wrapper">
+            <div class="ph-and-ach">
+                <div class="avatar">
+                    <img src="../images/ava.png" alt="" class="photo-main">
+                    <span class="name-user">Unigirl</span>
+                </div>
+                <div class="achievements">
+                    <p class="ach-title">Мои достижения:</p>
+                    <hr class="ach-line">
+                    <div class="icons">
+                        <div class="ach-group">
+                            <img src="../images/ach1.png" alt="" class="img-icon">
+                            <span class="ach-name">Первый урок пройден!</span>
+                        </div>
+                        <div class="ach-group">
+                            <img src="../images/ach2.png" alt="" class="img-icon">
+                            <span class="ach-name">Первый день на сайте!</span>
+                        </div>
+                        <div class="ach-group">
+                            <img src="../images/ach3.png" alt="" class="img-icon">
+                            <span class="ach-name">10 уроков пройдено!</span>
+                        </div>
+                        <img src="../images/ach-uknown.png" alt="" class="img-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="level">
+                <span class="my-level">Уровень 4</span>
+                <div class="coin">
+                    <img src="../images/coin.png" alt="" class="pic-coin">
+                    <span class="coin-title">Неткоины:</span>
+                    <span class="count-coin">75</span>
+                </div>
+            </div>
+            <div class="down">
+                <div class="left">
+                    <div class="progress">
+                        <p class="progress-title">До нового уровня:</p>
+                        <div class="progressbar">
+                            <progress max="100" value="55"></progress>
+                            <div class="progress-value"></div>
+                            <div class="progress-bg"><div class="progress-bar"></div></div>
+                        </div>
+                        <ul class="val-progress">
+                            <li>55</li>
+                            <li>100</li>
+                        </ul>
+                    </div>
+                    <div class="rating">
+                        <p class="progress-title">Рейтинг:</p>
+                        <div class="btns">
+                            <button class="among-friend" id="among-friend">Среди друзей</button>
+                            <button class="in-Russia" id="in-Russia">По России</button>
+                        </div>
+                        <div class="rang-group">
+                            <div class="rang-box rang-among-friends" onclick="RangAmongFriends()" id="rang-among-friends">
+                                <ol class="rang-name">
+                                    <li>Anobus</li>
+                                    <li>Smart husker</li>
+                                    <li>Рози)))</li>
+                                </ol>
+                                <ul class="rang-level">
+                                    <li>Ур.10 100</li>
+                                    <li>Ур.10 95</li>
+                                    <li>Ур.10 80</li>
+                                </ul>
+                            </div>
+                            <div class="rang-box rang-in-Russia" onclick="RangInRussia()" id="rang-in-Russia">
+                                <ol class="rang-name">
+                                    <li>Roco</li>
+                                    <li>Microlearning</li>
+                                    <li>Anobus</li>
+                                </ol>
+                                <ul class="rang-level">
+                                    <li>Ур.10 100</li>
+                                    <li>Ур.10 100</li>
+                                    <li>Ур.10 100</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="news">
+                        <h1 class="news-title">Новости</h1>
+                        <p class="filter">Фильтр</p>
+                        <div class="butt">
+                            <button class="news-btn active">Предстоящие события:</button>
+                            <button class="news-btn">Прошедшие события:</button>
+                        </div>
+                        <ul class="news-list">
+                            <li>Хакатон 06.02.23</li>
+                            <li>Розыгрыш призов</li>
+                            <li>Выдача баллов за тесты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="dialoges">
+            <span>Все</span>
+            <span>Добавленные</span>
+            <span>Избранные</span>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
 </body>
 </html>

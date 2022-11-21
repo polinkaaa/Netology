@@ -1,5 +1,8 @@
+@import url("../font/stylesheet.css");
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
 }
 .container{
     max-width: 1180px;
@@ -7,12 +10,17 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.wrapper{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+}
 .header {
-    font-family: 'Russo One', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 5px 40px 0;
     font-size: 14px;
 }
 .header-logo {
@@ -30,11 +38,20 @@ body {
     align-items: center;
     margin: 0;
     gap: 40px;
-    padding-right: 195px;
+    padding-right: 130px;
+    font-size: 17px;
 }
 .header-link {
     text-decoration: none;
     color: #000000;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+.header-link:hover {
+    color: #666666;
 }
 .header-info {
     display: flex;
@@ -45,22 +62,280 @@ body {
     border: none;
     cursor: pointer;
 }
-.bell {
+.btn {
+    background-color: transparent;
+    border: none;
+}
+svg {
     display: block;
-    background-image: url(../images/bell.png);
     width: 22px;
     height: 28px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    transition: all .2s ease;
 }
-.bell:hover {
-    background-image: url(../images/bell_other.png);
+svg:hover {
+    stroke: #666666;
+}
+.ph-and-ach {
+    display: flex;
+    gap: 300px;
+}
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: fit-content;
+    margin-top: 40px;
 }
 .photo-profile {
     width: 40px;
     height: 40px;
     padding-left: 10px;
 }
+.photo-main {
+    height: 160px;
+    width: 160px;
+}
+.name-user {
+    color: #FFFFFF;
+    background-color: #3F9BF0;
+    max-width: fit-content;
+    padding: 5px 30px;
+    font-size: 23px;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    margin-top: 145px;
+}
+.ach-title {
+    color: #3F9BF0;
+    margin: 60px 0 30px;
+    font-size: 20px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+.icons:last-child {
+    align-items: flex-start;
+}
+.ach-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.img-icon {
+    width: 70px;
+    height: 70px;
+}
+.ach-name {
+    max-width: 65px;
+    font-size: 13px;
+}
+.ach-line {
+    border: 2px solid #3F9BF0;
+    width: 30%;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: 35px;
+}
+.level {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    gap: 35px;
+}
+.pic-coin {
+    width: 30px;
+    height: 30px;
+}
+.coin {
+    display: flex;
+    align-items: center;
+}
+.count-coin {
+    padding-left: 5px;
+    color: #3F9BF0;
+}
+
+
+
+.progressbar
+{
+    position: absolute;
+    overflow: hidden;
+    filter: drop-shadow(5px 7px 2px rgba(0, 0, 0, 0.25));
+}
+
+.progressbar progress
+{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.progress-bar
+{
+    overflow: hidden;
+    background: #3F9BF0;
+    width: 144px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-value
+{
+    color: #333;
+    display: block;
+    line-height: 21px;
+    text-align: center;
+}
+
+.progress-bg
+{
+    background: #FCE185;
+    position: relative;
+    height: 20px;
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progressbar progress[value="1"] + .progress-value:before 
+{
+    content: "1%"; 
+}
+.progressbar progress[value="1"] ~ .progress-bg .progress-bar 
+{
+    width: 1%; 
+}
+
+
+
+
+.progress-title {
+    margin: 30px 0 15px;
+    color: #3F9BF0;
+    font-size: 18px;
+}
+.val-progress li::before {
+    content: '/';
+    position: relative;
+    left: -2px;
+    bottom: 1px;
+    pointer-events: none;
+}
+.val-progress {
+    list-style-type: none;
+    display: flex;
+    gap: 4px;
+    position: relative;
+    font-size: 15px;
+    padding-left: 180px;
+    padding-top: 1px;
+}
+.val-progress li:first-child::before {
+    display: none;
+}
+.btns {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.among-friend {
+    color: #FFFFFF;
+    background-color: #3F9BF0;
+    padding: 8px 20px;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.in-Russia {
+    background-color: #FFFFFF;
+    padding: 7px 30px;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
+    border-width: 1px;
+    cursor: pointer;
+}
+.rang-level {
+    list-style-type: none;
+    margin: 0;
+}
+.rang-box {
+    display: flex;
+    background-color: #D6F3FF;
+    padding: 15px 50px;
+}
+.rang-name {
+    margin: 0;
+    padding-left: 17px;
+    max-width: 110px;
+}
+.rang-group {
+    margin-bottom: 15px;
+}
+.rang-in-Russia {
+    display: none;
+}
+.butt {
+    font-size: 13px;
+}
+.down {
+    display: flex;
+    justify-content: space-between;
+}
+.news-title {
+    font-weight: 400;
+    font-size: 18px;
+}
+.filter {
+    color: #505050;
+    font-size: 14px;
+}
+.news-btn {
+    background-color: transparent;
+    border: none;
+    max-width: 125px;
+    text-align: start;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.news-list {
+    padding: 15px 0 0 15px;
+}
+.news {
+    background: rgba(204, 204, 204, 0.28);
+    padding: 20px 30px 30px;
+}
+.modal {
+    position: absolute;
+    outline: 9999px solid rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1;
+    background-color: #FFFFFF;
+    right: 300px;
+}
+.modal::after {
+    content: '';
+    border: 20px solid transparent;
+    border-bottom: 30px solid #FFFFFF;
+    position: absolute;
+    top: -48px;
+    right: 40px;
+}
+.dialoges {
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+/*видео*/
 .search-box {
     display: flex;
     position: absolute;
@@ -95,6 +370,9 @@ body {
 .main-link p {
     margin: 0;
 }
+.active {
+    border-left: 2px solid #000000;
+}
 .reaction {
     display: flex;
     position: relative;
@@ -127,4 +405,8 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 10px;
+}
+.link-left {
+    text-decoration: none;
+    color: #000000;
 }
