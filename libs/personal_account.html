@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body>
+<body id="body">
     <header>
         <div class="container">
             <div class="header">
@@ -84,11 +84,11 @@
                     <div class="rating">
                         <p class="progress-title">Рейтинг:</p>
                         <div class="btns">
-                            <button class="among-friend" id="among-friend">Среди друзей</button>
-                            <button class="in-Russia" id="in-Russia">По России</button>
+                            <button class="among-friend" id="among-friend" onclick="RangAmongFriends()">Среди друзей</button>
+                            <button class="in-Russia" id="in-Russia" onclick="RangInRussia()">По России</button>
                         </div>
                         <div class="rang-group">
-                            <div class="rang-box rang-among-friends" onclick="RangAmongFriends()" id="rang-among-friends">
+                            <div class="rang-box rang-among-friends"  id="rang-among-friends">
                                 <ol class="rang-name">
                                     <li>Anobus</li>
                                     <li>Smart husker</li>
@@ -100,7 +100,7 @@
                                     <li>Ур.10 80</li>
                                 </ul>
                             </div>
-                            <div class="rang-box rang-in-Russia" onclick="RangInRussia()" id="rang-in-Russia">
+                            <div class="rang-box rang-in-Russia" id="rang-in-Russia">
                                 <ol class="rang-name">
                                     <li>Roco</li>
                                     <li>Microlearning</li>
@@ -120,13 +120,18 @@
                         <h1 class="news-title">Новости</h1>
                         <p class="filter">Фильтр</p>
                         <div class="butt">
-                            <button class="news-btn active">Предстоящие события:</button>
-                            <button class="news-btn">Прошедшие события:</button>
+                            <button class="news-btn active" onclick="new_new()" id="news-list-btn">Предстоящие события:</button>
+                            <button class="news-btn" onclick="past_new()" id="past-list-btn">Прошедшие события:</button>
                         </div>
-                        <ul class="news-list">
+                        <ul class="news-list" id="news-list">
                             <li>Хакатон 06.02.23</li>
                             <li>Розыгрыш призов</li>
                             <li>Выдача баллов за тесты</li>
+                        </ul>
+                        <ul class="news-list-past" id="news-list-past">
+                            <li>Хакатон 25.11.22</li>
+                            <li>Розыгрыш призов</li>
+                            <li>20 баллов за тесты</li>
                         </ul>
                     </div>
                 </div>
@@ -134,10 +139,62 @@
         </div>
     </main>
     <div class="modal" id="modal">
-        <div class="dialoges">
-            <span>Все</span>
-            <span>Добавленные</span>
-            <span>Избранные</span>
+        <div class="dialoges" id="dialoges">
+            <div class="head-dialoges">
+                <button class="msg-block" onclick="all_friends()" id="all_friends">Все</button>
+                <button class="msg-block active1" onclick="new_friends()" id="new_friends">Добавленные</button>
+                <button class="msg-block" onclick="best_friends()" id="best_friends">Избранные</button>
+            </div>
+            <div class="chats">
+                <button class="friends-block" onclick="friend1()">
+                    <img src="../images/ava-fr1.png" alt="" class="ava-friend">
+                    <div class="name-and-text">
+                        <h1 class="name-friend">Машуня</h1>
+                        <p class="text-friend">Вы: Ты сделала дз?</p>
+                    </div>
+                </button>
+                <button class="friends-block" onclick="friend2()">
+                    <img src="../images/ava-fr2.png" alt="" class="ava-friend">
+                    <div class="name-and-text">
+                        <h1 class="name-friend">Rico56_</h1>
+                        <p class="text-friend">Споки ноки</p>
+                    </div>
+                </button>
+                <button class="friends-block" onclick="friend3()">
+                    <img src="../images/ava-fr3.png" alt="" class="ava-friend">
+                    <div class="name-and-text">
+                        <h1 class="name-friend">Ubi</h1>
+                        <p class="text-friend">Препод?</p>
+                    </div>
+                </button>
+                <button class="friends-block" onclick="friend4()">
+                    <img src="../images/ava-fr4.png" alt="" class="ava-friend">
+                    <div class="name-and-text">
+                        <h1 class="name-friend">Любитель роллов</h1>
+                        <p class="text-friend">Вы:</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="chat_with" id="chat_with">
+                <div class="top">
+                    <img src="../images/ava-fr1.png" alt="" class="chat_photo">
+                    <h1 class="name_chat_fr">Машуня</h1>
+                    <button class="btn-actions" onclick="actions()"><img src="../images/actions.png" alt="" class="actions"></button>
+                    <div class="window_act" id="window_act">
+                        <button class="window_act_btn">Поиск</button>
+                        <button class="window_act_btn">Вложения</button>
+                        <button class="window_act_btn">Заблокировать</button>
+                        <button class="window_act_btn">Удалить чат</button>
+                        <button class="window_act_btn">Назад</button>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <button class="btn-smile"><img src="../images/smile.png" alt="" class="smile"></button>
+                    <textarea name="" id="" cols="22" rows="1"></textarea>
+                    <button class="btn-smile"><img src="../images/screp.png" alt="" class="screp"></button>
+                    <button class="btn-smile"><img src="../images/micro.png" alt="" class="micro"></button>
+                </div>
         </div>
     </div>
     <script src="../js/main.js"></script>

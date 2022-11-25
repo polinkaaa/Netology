@@ -248,10 +248,11 @@ svg:hover {
 .among-friend {
     color: #FFFFFF;
     background-color: #3F9BF0;
-    padding: 8px 20px;
+    padding: 7px 20px;
     box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
-    border: none;
     margin-right: 20px;
+    border-color: #3F9BF0;
+    border-width: 1px;
     cursor: pointer;
 }
 .in-Russia {
@@ -307,6 +308,10 @@ svg:hover {
 .news-list {
     padding: 15px 0 0 15px;
 }
+.news-list-past {
+    padding: 15px 0 0 15px;
+    display: none;
+}
 .news {
     background: rgba(204, 204, 204, 0.28);
     padding: 20px 30px 30px;
@@ -318,6 +323,8 @@ svg:hover {
     z-index: 1;
     background-color: #FFFFFF;
     right: 300px;
+    height: 400px;
+    width: 318px;
 }
 .modal::after {
     content: '';
@@ -327,8 +334,124 @@ svg:hover {
     top: -48px;
     right: 40px;
 }
-.dialoges {
+.head-dialoges {
+    display: flex;
+    gap: 8px;
     background-color: #FFFFFF;
+    padding: 20px;
+}
+.msg-block {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #3F9BF0;
+}
+.active1 {
+    color: #000000;
+}
+.ava-friend {
+    height: 60px;
+    width: 60px;
+}
+.friends-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.name-friend {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0 0 5px;
+}
+.text-friend {
+    font-size: 15px;
+    color: #505050;
+    margin: 0;
+}
+.chats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 20px 20px;
+}
+.name-and-text {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.top {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+.chat_photo {
+    width: 50px;
+    height: 50px;
+}
+.name_chat_fr {
+    font-weight: 400;
+    font-size: 19px;
+}
+.actions {
+    width: 35px;
+    height: 10px;
+}
+.btn-actions {
+    background-color: transparent;
+    height: 23px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.chat_with {
+    display: none;
+}
+.smile {
+    height: 20px;
+    width: 20px;
+}
+.screp {
+    height: 20px;
+    width: 16px;
+}
+.micro {
+    height: 20px;
+    width: 15px;
+}
+.btn-smile, .window_act_btn {
+    background-color: transparent;
+    border: none;
+}
+.bottom {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+}
+.window_act {
+    background-color: #D6F3FF;
+    position: absolute;
+    flex-direction: column;
+    padding: 8px;
+    gap: 5px;
+    right: -190px;
+    top: 15px;
+    display: none;
+}
+.window_act_btn {
+    text-align: start;
+    cursor: pointer;
+}
+.window_act_btn::after {
+    content: '';
+    border: 20px solid transparent;
+    border-bottom: 30px solid #D6F3FF;
+    position: absolute;
+    top: -5px;
+    left: -45px;
+    rotate: 270deg;
 }
 
 
@@ -409,4 +532,10 @@ svg:hover {
 .link-left {
     text-decoration: none;
     color: #000000;
+}
+.my_crs {
+    padding-left: 8px;
+}
+.recommend {
+    padding-left: 10px;
 }
