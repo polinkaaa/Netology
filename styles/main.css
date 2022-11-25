@@ -421,6 +421,10 @@ svg:hover {
     height: 20px;
     width: 15px;
 }
+.textbox {
+    max-width: 213px;
+    max-height: 270px;
+}
 .btn-smile, .window_act_btn {
     background-color: transparent;
     border: none;
